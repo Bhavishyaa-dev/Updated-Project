@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Streamix</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #141414;
+            color: #e5e5e5;
+        }
+        .faq-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://assets.nflxext.com/ffe/siteui/vlv3/9c5457b8-9ab0-4a04-9fc1-e608d5670f1a/710d74e0-7158-408e-8d9b-23c219dee5df/IN-en-20210719-popsignuptwoweeks-perspective_alpha_website_small.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+        .faq-header-content {
+            max-width: 800px;
+            padding: 20px;
+        }
+        .faq-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .faq-header p {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 30px;
+        }
+        .search-box {
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .search-box input {
+            width: 100%;
+            padding: 15px 20px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 30px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            backdrop-filter: blur(5px);
+        }
+        .search-box input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .search-box button {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            padding: 10px;
+        }
+        .faq-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .faq-categories {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .category-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            background-color: #2a2a2a;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .category-btn:hover, .category-btn.active {
+            background-color: #e50914;
+        }
+        .faq-item {
+            background-color: #2a2a2a;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .faq-question {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .faq-question:hover {
+            background-color: #333;
+        }
+        .faq-question h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background-color: #333;
+        }
+        .faq-item.active .faq-answer {
+            padding: 20px;
+            max-height: 500px;
+        }
+        .faq-item.active .faq-question {
+            background-color: #e50914;
+        }
+        .faq-item.active .faq-question h3 {
+            color: #fff;
+        }
+        .toggle-icon {
+            transition: transform 0.3s ease;
+        }
+        .faq-item.active .toggle-icon {
+            transform: rotate(45deg);
+        }
+        .contact-support {
+            text-align: center;
+            margin-top: 40px;
+            padding: 40px;
+            background: linear-gradient(45deg, #e50914, #831010);
+            border-radius: 8px;
+        }
+        .contact-support h2 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        .contact-support p {
+            color: #fff;
+            margin-bottom: 30px;
+        }
+        .contact-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #fff;
+            color: #e50914;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .contact-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        @media (max-width: 768px) {
+            .faq-header h1 {
+                font-size: 2.5rem;
+            }
+            .faq-header p {
+                font-size: 1rem;
+            }
+            .faq-question h3 {
+                font-size: 1rem;
+            }
+            .faq-answer {
+                font-size: 0.9rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .faq-header h1 {
+                font-size: 2rem;
+            }
+            .category-btn {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="faq-header">
+        <div class="faq-header-content">
+            <h1>Frequently Asked Questions</h1>
+            <p>Find answers to common questions about Streamix</p>
+            <div class="search-box">
+                <input type="text" placeholder="Search for your question..." id="faqSearch">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-container">
+        <div class="faq-categories">
+            <button class="category-btn active" data-category="all">All</button>
+            <button class="category-btn" data-category="account">Account</button>
+            <button class="category-btn" data-category="streaming">Streaming</button>
+            <button class="category-btn" data-category="billing">Billing</button>
+            <button class="category-btn" data-category="technical">Technical</button>
+        </div>
+
+        <div class="faq-list">
+            <!-- Account Questions -->
+            <div class="faq-item" data-category="account">
+                <div class="faq-question">
+                    <h3>How do I create a Streamix account?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Creating a Streamix account is easy! Simply click the "Sign Up" button, enter your email address, create a password, and follow the verification steps. You can also sign up using your social media accounts for a faster process.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="account">
+                <div class="faq-question">
+                    <h3>How do I reset my password?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>To reset your password, click on the "Forgot Password" link on the login page. Enter your email address, and we'll send you instructions to reset your password. Make sure to check your spam folder if you don't receive the email.</p>
+                </div>
+            </div>
+
+            <!-- Streaming Questions -->
+            <div class="faq-item" data-category="streaming">
+                <div class="faq-question">
+                    <h3>What devices can I watch Streamix on?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>You can watch Streamix on a wide range of devices including:</p>
+                    <ul>
+                        <li>Smart TVs (Samsung, LG, Sony, etc.)</li>
+                        <li>Mobile devices (iOS and Android)</li>
+                        <li>Tablets</li>
+                        <li>Web browsers</li>
+                        <li>Gaming consoles (PlayStation, Xbox)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="streaming">
+                <div class="faq-question">
+                    <h3>How do I download content for offline viewing?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>To download content for offline viewing:</p>
+                    <ol>
+                        <li>Open the Streamix app on your mobile device</li>
+                        <li>Find the content you want to download</li>
+                        <li>Tap the download icon (arrow pointing downward)</li>
+                        <li>Wait for the download to complete</li>
+                        <li>Access your downloads in the "Downloads" section</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Billing Questions -->
+            <div class="faq-item" data-category="billing">
+                <div class="faq-question">
+                    <h3>What payment methods do you accept?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>We accept various payment methods including:</p>
+                    <ul>
+                        <li>Credit/Debit cards (Visa, MasterCard, American Express)</li>
+                        <li>PayPal</li>
+                        <li>Digital wallets (Google Pay, Apple Pay)</li>
+                        <li>Bank transfers</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="billing">
+                <div class="faq-question">
+                    <h3>How do I cancel my subscription?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>To cancel your subscription:</p>
+                    <ol>
+                        <li>Log in to your account</li>
+                        <li>Go to "Account Settings"</li>
+                        <li>Click on "Subscription"</li>
+                        <li>Select "Cancel Subscription"</li>
+                        <li>Follow the prompts to confirm cancellation</li>
+                    </ol>
+                    <p>Note: You'll continue to have access until the end of your billing period.</p>
+                </div>
+            </div>
+
+            <!-- Technical Questions -->
+            <div class="faq-item" data-category="technical">
+                <div class="faq-question">
+                    <h3>What internet speed do I need?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Recommended internet speeds for Streamix:</p>
+                    <ul>
+                        <li>Standard Definition (SD): 3 Mbps</li>
+                        <li>High Definition (HD): 5 Mbps</li>
+                        <li>Ultra HD (4K): 25 Mbps</li>
+                    </ul>
+                    <p>For the best experience, we recommend using a wired connection or a strong Wi-Fi signal.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="technical">
+                <div class="faq-question">
+                    <h3>Why am I experiencing buffering?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Buffering can occur due to several reasons:</p>
+                    <ul>
+                        <li>Slow internet connection</li>
+                        <li>Network congestion</li>
+                        <li>Device performance issues</li>
+                        <li>Server-side problems</li>
+                    </ul>
+                    <p>Try these solutions:</p>
+                    <ol>
+                        <li>Check your internet speed</li>
+                        <li>Restart your device</li>
+                        <li>Clear app cache</li>
+                        <li>Use a wired connection</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-support">
+            <h2>Still have questions?</h2>
+            <p>Our support team is here to help you 24/7</p>
+            <a href="support.html" class="contact-btn">Contact Support</a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // FAQ Toggle
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    faqItems.forEach(faq => faq.classList.remove('active'));
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+
+            // Category Filter
+            const categoryButtons = document.querySelectorAll('.category-btn');
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    categoryButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    
+                    const category = button.dataset.category;
+                    faqItems.forEach(item => {
+                        if (category === 'all' || item.dataset.category === category) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Search Functionality
+            const searchInput = document.getElementById('faqSearch');
+            searchInput.addEventListener('input', (e) => {
+                const searchTerm = e.target.value.toLowerCase();
+                faqItems.forEach(item => {
+                    const question = item.querySelector('h3').textContent.toLowerCase();
+                    const answer = item.querySelector('.faq-answer').textContent.toLowerCase();
+                    
+                    if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who's Watching? - Streamix</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="profile-container">
+        <div class="profile-header">
+            <h1>Who's Watching?</h1>
+        </div>
+        
+        <div class="profiles-grid">
+            <div class="profile-item" onclick="window.location.href='index.html'">
+                <div class="profile-avatar" style="background-color: #E50914;">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="profile-name">Superhero</div>
+            </div>
+            
+            <div class="profile-item">
+                <div class="profile-avatar" style="background-color: #2B2B2B;">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="profile-name">Batman</div>
+            </div>
+            
+            <div class="profile-item">
+                <div class="profile-avatar" style="background-color: #831010;">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="profile-name">Spider-Man</div>
+            </div>
+            
+            <div class="profile-item add-profile" id="addProfileBtn">
+                <div class="profile-avatar">
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="profile-name">Add Profile</div>
+            </div>
+        </div>
+        
+        <div class="profile-actions">
+            <button class="manage-profiles-btn">Manage Profiles</button>
+        </div>
+    </div>
+
+    <!-- Add Profile Modal -->
+    <div id="addProfileModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Add Profile</h2>
+            <form id="addProfileForm">
+                <div class="form-group">
+                    <label for="profileName">Profile Name</label>
+                    <input type="text" id="profileName" required>
+                </div>
+                <div class="form-group">
+                    <label for="profileAvatar">Profile Color</label>
+                    <div class="avatar-options">
+                        <div class="avatar-option selected" style="background-color: #E50914;">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="avatar-option" style="background-color: #2B2B2B;">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="avatar-option" style="background-color: #831010;">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="avatar-option" style="background-color: #1A1A1A;">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">Add Profile</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="profile.js"></script>
+</body>
+</html>

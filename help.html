@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Center - Streamix</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lemon&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <h1>Streamix</h1>
+            </div>
+            <nav class="navBar">
+                <div class="open-btn" id="open">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="nav-items">
+                    <ul class="list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Movies</a></li>
+                        <li><a href="#">TV Series</a></li>
+                        <li><a href="#">Animated Movies</a></li>
+                        <li><a href="#">My List</a></li>
+                        <div class="close-btn" id="close">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    </div>
+
+    <main class="help-main">
+        <section class="help-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h3>How do I create an account?</h3>
+                    <p>Click on the "Sign Up" button in the top right corner and follow the registration process. You'll need to provide your email address and create a password.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How do I reset my password?</h3>
+                    <p>Click on "Forgot Password" on the login page, enter your email address, and follow the instructions sent to your email.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How do I add movies to my watchlist?</h3>
+                    <p>Click the "+" icon on any movie card or the "Add to List" button on the movie details page.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How do I change my subscription plan?</h3>
+                    <p>Go to your account settings, select "Subscription", and choose your desired plan.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="help-section">
+            <h2>Contact Support</h2>
+            <div class="contact-form">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div>
+            <h4>Movies</h4>
+            <h4>TV Series</h4>
+            <h4>Animated Movies</h4>
+        </div>
+        <div>
+            <h4><a href="privacy.html">Privacy Policy</a></h4>
+            <h4>Cookie Policy</h4>
+            <h4>Terms of Use</h4>
+        </div>
+        <div>
+            <h4><a href="help.html">Help Center</a></h4>
+            <h4>Support</h4>
+            <h4>FAQ</h4>
+        </div>
+        <div>
+            <h4>Follow Us</h4>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/the__bhavish?igsh=bm5xY2dnMDk0Z2lr" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html> 

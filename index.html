@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lemon&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Pop-Corn House - Your Ultimate Movie Experience</title>
+
+<body>
+    <!-- Page Loader -->
+    <div class="page-loader">
+        <div class="loader-content">
+            <i class="fas fa-film fa-spin" style="font-size: 3rem; color: var(--primary-red);"></i>
+        </div>
+    </div>
+
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <h1>Streamix</h1>
+            </div>
+            <nav class="navBar">
+                <div class="open-btn" id="open">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="nav-items">
+                    <ul class="list">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#movies">Movies</a></li>
+                        <li><a href="#tv-series">TV Series</a></li>
+                        <li><a href="#animated">Animated Movies</a></li>
+                        <li><a href="#">My List</a></li>
+                        <div class="close-btn" id="close">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                    </ul>
+                    <ul class="user" id="userNav">
+                        <li><i class="fa-solid fa-magnifying-glass"></i></li>
+                        <li><i class="fa-solid fa-bell"></i></li>
+                        <li class="auth-buttons">
+                            <a href="login.html" class="login-btn">Login</a>
+                            <a href="register.html" class="register-btn">Register</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    </div>
+
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide-1" style="background-image: url('https://image.tmdb.org/t/p/original/14QbnygCuTO0vl7CAFmPf1fgZfV.jpg');">
+                <div class="swiper-container">
+                    <div class="type">
+                        <p>Action</p>
+                        <div class="line"></div>
+                        <p>Adventure</p>
+                    </div>
+                    <div class="movie-title">
+                        <h2>Spider-Man: No Way Home</h2>
+                        <p>When Peter Parker's world is turned upside down, he seeks help from Doctor Strange, but things soon become much more dangerous.</p>
+                    </div>
+                    <div class="movie-rating">
+                        <p>IMDb 8.3</p>
+                        <p class="rect">4K</p>
+                        <p>2h 28m</p>
+                    </div>
+                    <div class="movie-btn">
+                        <button class="btn-1">Watch Now</button>
+                        <button class="btn-2">Watch Trailer</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide slide-2" style="background-image: url('https://image.tmdb.org/t/p/original/8c4a8kE7PizaGQQnditMmI1xbRp.jpg');">
+                <div class="swiper-container">
+                    <div class="type">
+                        <p>Sci-Fi</p>
+                        <div class="line"></div>
+                        <p>Action</p>
+                    </div>
+                    <div class="movie-title">
+                        <h2>MATRIX RESURRECTION</h2>
+                        <p>Suffering from palpable delusions, burnt-out Thomas Anderson, the award-winning creator of The Matrix (1999) video game series, now relies on potent blue pills to keep his inner demons at bay.</p>
+                    </div>
+                    <div class="movie-rating">
+                        <div>
+                            <p>IMDb: 5,7</p>
+                        </div>
+                        <div>
+                            <p>2 h 28 m</p>
+                        </div>
+                        <div class="rect">
+                            <p>18+</p>
+                        </div>
+                    </div>
+                    <div class="movie-btn">
+                        <button class="btn-1">Watch Now</button>
+                        <button class="btn-2">Watch Trailer</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide slide-3" style="background-image: url('https://image.tmdb.org/t/p/original/pIkRyD18kl4FhoCNQuWxWu5cBLM.jpg');">
+                <div class="swiper-container">
+                    <div class="type">
+                        <p>Adventure</p>
+                        <div class="line"></div>
+                        <p>Action</p>
+                        <div class="line"></div>
+                        <p>Comedy</p>
+                    </div>
+                    <div class="movie-title">
+                        <h2>THOR LOVE AND THUNDER</h2>
+                        <p>Thor: Love and Thunder is a 2022 American superhero film based on Marvel Comics featuring the character Thor.</p>
+                    </div>
+                    <div class="movie-rating">
+                        <div>
+                            <p>IMDb: 6,3</p>
+                        </div>
+                        <div>
+                            <p>1 h 58 m</p>
+                        </div>
+                        <div class="rect">
+                            <p>10+</p>
+                        </div>
+                    </div>
+                    <div class="movie-btn">
+                        <button class="btn-1">Watch Now</button>
+                        <button class="btn-2">Watch Trailer</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide slide-4" style="background-image: url('https://image.tmdb.org/t/p/original/9n5e1vToDVnqz3hW10Jdlvmzpo0.jpg');">
+                <div class="swiper-container">
+                    <div class="type">
+                        <p>Mystery</p>
+                        <div class="line"></div>
+                        <p>Action</p>
+                        <div class="line"></div>
+                        <p>Drama</p>
+                    </div>
+                    <div class="movie-title">
+                        <h2>THE BLUE PALE</h2>
+                        <p>The Pale Blue Eye is a 2022 American mystery thriller film written and directed by Scott Cooper.</p>
+                    </div>
+                    <div class="movie-rating">
+                        <div>
+                            <p>IMDb: 6,7</p>
+                        </div>
+                        <div>
+                            <p>2 h 8 m</p>
+                        </div>
+                        <div class="rect">
+                            <p>18+</p>
+                        </div>
+                    </div>
+                    <div class="movie-btn">
+                        <button class="btn-1">Watch Now</button>
+                        <button class="btn-2">Watch Trailer</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide slide-5" style="background-image: url('https://image.tmdb.org/t/p/original/74xTEgt7R36Fpooo50r9T25onhq.jpg');">
+                <div class="swiper-container">
+                    <div class="type">
+                        <p>Crime</p>
+                        <div class="line"></div>
+                        <p>Action</p>
+                        <div class="line"></div>
+                        <p>Drama</p>
+                    </div>
+                    <div class="movie-title">
+                        <h2>THE BATMAN</h2>
+                        <p>Street-smart Nathan Drake is recruited by seasoned treasure hunter Victor "Sully" Sullivan to recover a fortune amassed by Ferdinand Magellan.</p>
+                    </div>
+                    <div class="movie-rating">
+                        <div>
+                            <p>IMDb: 7,8</p>
+                        </div>
+                        <div>
+                            <p>2 h 56 m</p>
+                        </div>
+                        <div class="rect">
+                            <p>18+</p>
+                        </div>
+                    </div>
+                    <div class="movie-btn">
+                        <button class="btn-1">Watch Now</button>
+                        <button class="btn-2">Watch Trailer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slider-container">
+        <div class="slider-content">
+            <h1>New Releases</h1>
+        </div>
+        <div class="owl-container">
+            <div class="owl-carousel owl-theme">
+                <div class="cards" data-category="action">
+                    <div class="card-img" style="background-image: url('spiderman no way home.jpeg');">
+                        <div class="img-title">
+                            <h4>8.3</h4>
+                            <p>IMDb</p>
+                        </div>
+                    </div>
+                    <div class="card-title">
+                        <h3>Spider-Man No Way Home</h3>
+                        <p>Action, Adventure, Fantasy</p>
+                    </div>
+                </div>
+                <div class="cards" data-category="horror">
+                    <div class="card-img" style="background-image: url('the black phone.jpeg');">
+                        <div class="img-title">
+                            <h4>7.0</h4>
+                            <p>IMDb</p>
+                        </div>
+                    </div>
+                    <div class="card-title">
+                        <h3>The Black Phone</h3>
+                        <p>Horror, Thriller</p>
+                    </div>
+                </div>
+                <div class="cards" data-category="adventure">
+                    <div class="card-img" style="background-image: url('jurrasic world dominion.jpeg');">
+                        <div class="img-title">
+                            <h4>6.6</h4>
+                            <p>IMDb</p>
+                        </div>
+                    </div>
+                    <div class="card-title">
+                        <h3>Jurassic World Dominion</h3>
+                        <p>Action, Adventure, Sci-Fi</p>
+                    </div>
+                </div>
+                <div class="cards" data-category="animation">
+                    <div class="card-img" style="background-image: url('minions.jpeg');">
+                        <div class="img-title">
+                            <h4>7.8</h4>
+                            <p>IMDb</p>
+                        </div>
+                    </div>
+                    <div class="card-title">
+                        <h3>Minions: The Rise of Gru</h3>
+                        <p>Animation, Comedy</p>
+                    </div>
+                </div>
+                <div class="cards" data-category="biography">
+                    <div class="card-img" style="background-image: url('irish man.jpeg');">
+                        <div class="img-title">
+                            <h4>7.8</h4>
+                            <p>IMDb</p>
+                        </div>
+                    </div>
+                    <div class="card-title">
+                        <h3>The Irishman</h3>
+                        <p>Biography, Crime, Drama</p>
+                    </div>
+                </div>
+                <div class="cards" data-category="action">
+                    <div class="card-img" style="background-image: url('matrix.jpeg');">
+                        <div class="img-title">
+                            <h4>5.7</h4>
+                            <p>IMDb</p>
+                        </div>
+                    </div>
+                    <div class="card-title">
+                        <h3>Matrix Resurrection</h3>
+                        <p>Action, Sci-Fi</p>
+                    </div>
+                </div>
+                <div class="cards" data-category="comedy">
+                    <div class="card-img" style="background-image: url('hustle.jpeg');">
+                        <div class="img-title">
+                            <h4>7.3</h4>
+                            <p>IMDb</p>
+                        </div>
+                    </div>
+                    <div class="card-title">
+                        <h3>Hustle</h3>
+                        <p>Comedy, Drama, Sport</p>
+                    </div>
+                </div>
+                <div class="cards" data-category="drama">
+                    <div class="card-img" style="background-image: url('rebecca.jpeg');">
+                        <div class="img-title">
+                            <h4>8.1</h4>
+                            <p>IMDb</p>
+                        </div>
+                    </div>
+                    <div class="card-title">
+                        <h3>Rebecca</h3>
+                        <p>Drama, Mystery, Film-noir</p>
+                    </div>
+                </div>
+                <div class="cards" data-category="crime">
+                    <div class="card-img" style="background-image: url('joker.jpeg');">
+                        <div class="img-title">
+                            <h4>8.4</h4>
+                            <p>IMDb</p>
+                        </div>
+                    </div>
+                    <div class="card-title">
+                        <h3>Joker</h3>
+                        <p>Crime, Drama, Thriller</p>
+                    </div>
+                </div>
+                <div class="cards" data-category="action">
+                    <div class="card-img" style="background-image: url('extraction.jpeg');">
+                        <div class="img-title">
+                            <h4>6.7</h4>
+                            <p>IMDb</p>
+                        </div>
+                    </div>
+                    <div class="card-title">
+                        <h3>Extraction</h3>
+                        <p>Action, Thriller</p>
+                    </div>
+                </div>
+                <div class="cards" data-category="action">
+                    <div class="card-img" style="background-image: url('anna.jpeg');">
+                        <div class="img-title">
+                            <h4>6.6</h4>
+                            <p>IMDb</p>
+                        </div>
+                    </div>
+                    <div class="card-title">
+                        <h3>Anna</h3>
+                        <p>Action, Thriller</p>
+                    </div>
+                </div>
+                <div class="cards" data-category="action">
+                    <div class="card-img" style="background-image: url('doctor strange.jpeg');">
+                        <div class="img-title">
+                            <h4>6.9</h4>
+                            <p>IMDb</p>
+                        </div>
+                    </div>
+                    <div class="card-title">
+                        <h3>Doctor Strange</h3>
+                        <p>Action, Adventure, Fantasy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="movies" id="movies">
+        <div class="movies-title">
+            <h1>Movies</h1>
+        </div>
+        <div class="movies-ctg">
+            <div class="ctg-1">
+                <button class="btn">All</button>
+                <button class="btn">Action</button>
+                <button class="btn">Adventure</button>
+                <button class="btn">Biography</button>
+                <button class="btn">Crime</button>
+                <button class="btn">Comedy</button>
+                <button class="btn">Drama</button>
+                <button class="btn">Fantasy</button>
+                <button class="btn">Historical</button>
+                <button class="btn">Horror</button>
+                <button class="btn">Musical</button>
+                <button class="btn">Sci-Fi</button>
+                <button class="btn">Sport</button>
+                <button class="btn">Thriller</button>
+                <button class="btn">Popular</button>
+            </div>
+        </div>
+
+        <div class="movies-card">
+            <div class="cards" data-category="action">
+                <div class="card-img" style="background-image: url('blackout.jpeg');">
+                    <div class="img-title">
+                        <h3>Blackout</h3>
+                        <span>2024 • Action</span>
+                    </div>
+                </div>
+                <div class="card-title">
+                    <h4>3.8</h4>
+                    <p>IMDb</p>
+                </div>
+            </div>
+            <div class="cards" data-category="action">
+                <div class="card-img" style="background-image: url('prey.jpeg');">
+                    <div class="img-title">
+                        <h3>Prey</h3>
+                        <span>2024 • Action</span>
+                    </div>
+                </div>
+                <div class="card-title">
+                    <h4>7.2</h4>
+                    <p>IMDb</p>
+                </div>
+            </div>
+            <div class="cards" data-category="action">
+                <div class="card-img" style="background-image: url('john wick ch 3.jpeg');">
+                    <div class="img-title">
+                        <h3>John Wick: Chapter 3</h3>
+                        <span>2024 • Action</span>
+                    </div>
+                </div>
+                <div class="card-title">
+                    <h4>7.4</h4>
+                    <p>IMDb</p>
+                </div>
+            </div>
+            <div class="cards" data-category="animation">
+                <div class="card-img" style="background-image: url('sonic hedge hog 2.jpeg');">
+                    <div class="img-title">
+                        <h3>Sonic the Hedgehog 2</h3>
+                        <span>2024 • Animation</span>
+                    </div>
+                </div>
+                <div class="card-title">
+                    <h4>6.5</h4>
+                    <p>IMDb</p>
+                </div>
+            </div>
+            <div class="cards" data-category="crime">
+                <div class="card-img" style="background-image: url('once upon a time in america.jpeg');">
+                    <div class="img-title">
+                        <h3>Once Upon Time in America</h3>
+                        <span>2024 • Crime</span>
+                    </div>
+                </div>
+                <div class="card-title">
+                    <h4>8.3</h4>
+                    <p>IMDb</p>
+                </div>
+            </div>
+            <div class="cards" data-category="horror">
+                <div class="card-img" style="background-image: url('resident\ evill.jpg');">
+                    <div class="img-title">
+                        <h3>Resident Evil</h3>
+                        <span>2024 • Horror</span>
+                    </div>
+                </div>
+                <div class="card-title">
+                    <h4>5.2</h4>
+                    <p>IMDb</p>
+                </div>
+            </div>
+            <div class="cards" data-category="action">
+                <div class="card-img" style="background-image: url('narvik.jpeg');">
+                    <div class="img-title">
+                        <h3>Narvik: Hitler's First Defeat</h3>
+                        <span>2024 • Action</span>
+                    </div>
+                </div>
+                <div class="card-title">
+                    <h4>6.7</h4>
+                    <p>IMDb</p>
+                </div>
+            </div>
+            <div class="cards" data-category="action">
+                <div class="card-img" style="background-image: url('venom let there be carnage.jpeg');">
+                    <div class="img-title">
+                        <h3>Venom: Let There Be Carnage</h3>
+                        <span>2024 • Action</span>
+                    </div>
+                </div>
+                <div class="card-title">
+                    <h4>5.9</h4>
+                    <p>IMDb</p>
+                </div>
+            </div>
+            <div class="cards" data-category="action">
+                <div class="card-img" style="background-image: url('tenet.jpeg');">
+                    <div class="img-title">
+                        <h3>Tenet</h3>
+                        <span>2024 • Action</span>
+                    </div>
+                </div>
+                <div class="card-title">
+                    <h4>7.3</h4>
+                    <p>IMDb</p>
+                </div>
+            </div>
+            <div class="cards" data-category="crime">
+                <div class="card-img" style="background-image: url('godfather.jpeg');">
+                    <div class="img-title">
+                        <h3>The Godfather</h3>
+                        <span>1972 • Crime</span>
+                    </div>
+                </div>
+                <div class="card-title">
+                    <h4>9.2</h4>
+                    <p>IMDb</p>
+                </div>
+            </div>
+            <div class="cards" data-category="action">
+                <div class="card-img" style="background-image: url('shershah.jpeg');">
+                    <div class="img-title">
+                        <h3>Shershaah</h3>
+                        <span>2024 • Action</span>
+                    </div>
+                </div>
+                <div class="card-title">
+                    <h4>8.4</h4>
+                    <p>IMDb</p>
+                </div>
+            </div>
+            <div class="cards" data-category="action">
+                <div class="card-img" style="background-image: url('eternals.jpeg');">
+                    <div class="img-title">
+                        <h3>Eternals</h3>
+                        <span>2024 • Action</span>
+                    </div>
+                </div>
+                <div class="card-title">
+                    <h4>6.3</h4>
+                    <p>IMDb</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slider-container" id="tv-series">
+        <div class="slider-content">
+            <h1>TV Series</h1>
+        </div>
+        <div class="owl-container">
+            <div class="owl-carousel owl-theme">
+                <div class="cards">
+                    <div class="card-img" style="background-image: url('breaking bad.jpeg');">
+                        <div class="img-title">
+                            <h3>Breaking Bad</h3>
+                            <span>2008-2013 • Crime</span>
+                        </div>
+                    </div>
+                    <div class="card-title">
+                        <h4>9.5</h4>
+                        <p>IMDb</p>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="card-img" style="background-image: url('game of thrones.jpeg');">
+                        <div class="img-title">
+                            <h3>Game of Thrones</h3>
+                            <span>2011-2019 • Action</span>
+                        </div>
+                    </div>
+                    <div class="card-title">
+                        <h4>9.2</h4>
+                        <p>IMDb</p>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="card-img" style="background-image: url('how i met your  mother.jpeg');">
+                        <div class="img-title">
+                            <h3>How I Met Your Mother</h3>
+                            <span>2005-2014 • Comedy</span>
+                        </div>
+                    </div>
+                    <div class="card-title">
+                        <h4>8.3</h4>
+                        <p>IMDb</p>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="card-img" style="background-image: url('friends.jpeg');">
+                        <div class="img-title">
+                            <h3>Friends</h3>
+                            <span>1994-2004 • Comedy</span>
+                        </div>
+                    </div>
+                    <div class="card-title">
+                        <h4>8.2</h4>
+                        <p>IMDb</p>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="card-img" style="background-image: url('wednesday.jpeg');">
+                        <div class="img-title">
+                            <h3>Wednesday</h3>
+                            <span>2022 • Comedy</span>
+                        </div>
+                    </div>
+                    <div class="card-title">
+                        <h4>8.2</h4>
+                        <p>IMDb</p>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="card-img" style="background-image: url('mr robot.jpeg');">
+                        <div class="img-title">
+                            <h3>Mr. Robot</h3>
+                            <span>2015-2019 • Crime</span>
+                        </div>
+                    </div>
+                    <div class="card-title">
+                        <h4>8.6</h4>
+                        <p>IMDb</p>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="card-img" style="background-image: url('witcher.jpeg');">
+                        <div class="img-title">
+                            <h3>Witcher</h3>
+                            <span>2019-2022 • Action</span>
+                        </div>
+                    </div>
+                    <div class="card-title">
+                        <h4>8.1</h4>
+                        <p>IMDb</p>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="card-img" style="background-image: url('narcos.jpeg');">
+                        <div class="img-title">
+                            <h3>Narcos</h3>
+                            <span>2015-2017 • Crime</span>
+                        </div>
+                    </div>
+                    <div class="card-title">
+                        <h4>8.1</h4>
+                        <p>IMDb</p>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="card-img" style="background-image: url('better call saul.jpeg');">
+                        <div class="img-title">
+                            <h3>Better Call Saul</h3>
+                            <span>2015-2022 • Crime</span>
+                        </div>
+                    </div>
+                    <div class="card-title">
+                        <h4>8.9</h4>
+                        <p>IMDb</p>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="card-img" style="background-image: url('dark.jpeg');">
+                        <div class="img-title">
+                            <h3>Dark</h3>
+                            <span>2017-2022 • Crime</span>
+                        </div>
+                    </div>
+                    <div class="card-title">
+                        <h4>8.7</h4>
+                        <p>IMDb</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slider-container" id="animated">
+        <div class="slider-content">
+            <h1>Animated Movies</h1>
+        </div>
+        <div class="owl-container">
+            <div class="owl-carousel owl-theme">
+                <div class="cards">
+                    <div class="card-img" style="background-image: url('the addams family.jpeg');">
+                        <div class="img-title">
+                            <h3>The Addams Family</h3>
+                            <span>2019 • Animation</span>
+                        </div>
+                    </div>
+                    <div class="card-title">
+                        <h4>5.8</h4>
+                        <p>IMDb</p>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="card-img" style="background-image: url('how to train your dragon.jpeg');">
+                        <div class="img-title">
+                            <h3>How To Train Your Dragon</h3>
+                            <span>2010 • Animation</span>
+                        </div>
+                    </div>
+                    <div class="card-title">
+                        <h4>8.7</h4>
+                        <p>IMDb</p>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="card-img" style="background-image: url('encanto.jpeg');">
+                        <div class="img-title">
+                            <h3>Encanto</h3>
+                            <span>2024 • Animation</span>
+                        </div>
+                    </div>
+                    <div class="card-title">
+                        <h4>7.2</h4>
+                        <p>IMDb</p>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="card-img" style="background-image: url('incredibles 2.jpeg');">
+                        <div class="img-title">
+                            <h3>Incredibles 2</h3>
+                            <span>2018 • Animation</span>
+                        </div>
+                    </div>
+                    <div class="card-title">
+                        <h4>7.6</h4>
+                        <p>IMDb</p>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="card-img" style="background-image: url('lion king.jpeg');">
+                        <div class="img-title">
+                            <h3>Lion King</h3>
+                            <span>1994 • Animation</span>
+                        </div>
+                    </div>
+                    <div class="card-title">
+                        <h4>6.8</h4>
+                        <p>IMDb</p>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="card-img" style="background-image: url('rone s gone wrong.jpeg');">
+                        <div class="img-title">
+                            <h3>Ron's Gone Wrong</h3>
+                            <span>2024 • Animation</span>
+                        </div>
+                    </div>
+                    <div class="card-title">
+                        <h4>7.0</h4>
+                        <p>IMDb</p>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="card-img" style="background-image: url('scoob.jpeg');">
+                        <div class="img-title">
+                            <h3>Scoob!</h3>
+                            <span>2024 • Animation</span>
+                        </div>
+                    </div>
+                    <div class="card-title">
+                        <h4>5.6</h4>
+                        <p>IMDb</p>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="card-img" style="background-image: url('the sea beast.jpeg');">
+                        <div class="img-title">
+                            <h3>The Sea Beast</h3>
+                            <span>2024 • Animation</span>
+                        </div>
+                    </div>
+                    <div class="card-title">
+                        <h4>7.1</h4>
+                        <p>IMDb</p>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="card-img" style="background-image: url('wendell and wild.jpeg');">
+                        <div class="img-title">
+                            <h3>Wendell & Wild</h3>
+                            <span>2024 • Animation</span>
+                        </div>
+                    </div>
+                    <div class="card-title">
+                        <h4>6.4</h4>
+                        <p>IMDb</p>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="card-img" style="background-image: url('the mitchells vs the machine.jpeg');">
+                        <div class="img-title">
+                            <h3>The Mitchells vs The Machines</h3>
+                            <span>2024 • Animation</span>
+                        </div>
+                    </div>
+                    <div class="card-title">
+                        <h4>7.6</h4>
+                        <p>IMDb</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="subscribe">
+        <div class="subs-content">
+            <h3>Stay Updated with the Latest Movies & TV Shows</h3>
+            <p>Subscribe to our newsletter and get exclusive access to:</p>
+            <div class="subscribe-features">
+                <div class="feature-item">
+                    <i class="fas fa-film"></i>
+                    <span>New movie releases</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-tv"></i>
+                    <span>TV show updates</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-star"></i>
+                    <span>Exclusive content</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-gift"></i>
+                    <span>Special offers</span>
+                </div>
+            </div>
+        </div>
+        <div class="subs-btn">
+            <input type="email" class="email" id="emailInput" placeholder="Enter your email address...">
+            <input type="button" value="Subscribe Now" class="input-btn" id="subscribeBtn">
+        </div>
+        <div id="subscribeMessage" class="subscribe-message"></div>
+    </div>
+
+    <footer class="footer">
+        <div>
+            <h4><a href="#movies">Movies</a></h4>
+            <h4><a href="#tv-series">TV Series</a></h4>
+            <h4><a href="#animated">Animated Movies</a></h4>
+        </div>
+        <div>
+            <h4><a href="privacy.html">Privacy Policy</a></h4>
+            <h4><a href="cookie.html">Cookie Policy</a></h4>
+            <h4><a href="termsofUse.html">Terms of Use</a></h4>
+        </div>
+        <div>
+            <h4><a href="help.html">Help Center</a></h4>
+            <h4><a href="support.html">Support</a></h4>
+            <h4><a href="faq.html">FAQ</a></h4>
+        </div>
+        <div>
+            <h4>Follow Us</h4>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/the__bhavish?igsh=bm5xY2dnMDk0Z2lr" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Trailer Modal -->
+    <div id="trailerModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="trailer-container">
+                <iframe id="trailerFrame" width="100%" height="100%" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="search-modal">
+        <div class="search-container">
+            <div class="search-header">
+                <input type="text" class="search-input" placeholder="Search movies, TV shows...">
+                <button class="close-search">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="search-results"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>
